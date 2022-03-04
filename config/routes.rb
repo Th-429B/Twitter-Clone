@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # binds the get request to this page
   get 'static_pages/home'
 
   get 'static_pages/help'
