@@ -1,8 +1,11 @@
 class User < ApplicationRecord
     attr_accessor :remember_token, :activation_token, :reset_token
+    # can say they are depender, then no need to destroy tags first then tasks in my tasklist....
+    has_many :microposts, dependent: :destroy
+    
     before_save :downcase_email
     before_create :create_activation_digest
-    has_many :microposts
+    
     # before_save { email.downcase! }
     before_save { self.email = email.downcase }
     validates :name, presence: true, length: { maximum: 50 }
@@ -73,6 +76,13 @@ class User < ApplicationRecord
     def password_reset_expired?
         # read as "Password reset sent earlier than two hours ago.”
         reset_sent_at < 2.hours.ago
+    end
+    
+    #Defines a proto-feed.
+    # See "Following users" for the full implementation.
+    def feed
+        # "?" is like the %d in java/c
+        Micropost.where("user_id = ?", id)
     end
 
     private
