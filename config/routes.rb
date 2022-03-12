@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
     # Somehow adding it to config/environment/development does not work.
     # Rails.application.routes.default_url_options[:host] = "https://7a8543eb0dae4eb48010c8df056abf29.vfs.cloud9.us-east-1.amazonaws.com/"
 
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
   resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end
