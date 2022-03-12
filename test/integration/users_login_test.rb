@@ -8,9 +8,9 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with invalid information" do
     get login_path
-    #assert_template 'sessions/new'
+    assert_template 'sessions/new'
     post login_path, params: { session: { email: "", password: "" } }
-    #assert_template 'sessions/new'
+    assert_template 'sessions/new'
     assert_not flash.empty?
     get root_path
     assert flash.empty?
@@ -25,7 +25,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
       assert_redirected_to @user
       # this actually visits the page
       follow_redirect!
-      #assert_template 'users/show'
+      assert_template 'users/show'
       # check if the login button is gone.
       assert_select "a[href=?]", login_path, count: 0
       assert_select "a[href=?]", logout_path
@@ -45,7 +45,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     log_in_as(@user, remember_me: '1')
     assert_not_empty cookies[:remember_token]
     # assign extracted to gem. somehow adding the gem and installing still prompts the error
-    # assert_equal cookies[:remember_token], assigns(:user).remember_token
+    assert_equal cookies[:remember_token], assigns(:user).remember_token
   end
   
   test "login without remembering" do

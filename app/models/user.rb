@@ -12,7 +12,7 @@ class User < ApplicationRecord
     
     # this adds ability to save secure password                    
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
     
     # class << self -> then can remove all the self in the methods name.
     # Returns the hash digest of the given string.
