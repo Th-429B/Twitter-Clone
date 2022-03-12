@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  Rails.application.routes.default_url_options[:host] = "https://7a8543eb0dae4eb48010c8df056abf29.vfs.cloud9.us-east-1.amazonaws.com/"
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's

@@ -1,4 +1,9 @@
 Rails.application.configure do
+  
+  # Commands in the tutorial do not work
+  # solution from: https://stackoverflow.com/questions/57341676/missing-host-to-link-to-please-provide-the-host-parameter-set-default-url-opt
+  Rails.application.routes.default_url_options[:host] = "https://7a8543eb0dae4eb48010c8df056abf29.vfs.cloud9.us-east-1.amazonaws.com/"
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
