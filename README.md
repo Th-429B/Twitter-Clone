@@ -3,6 +3,8 @@ This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
+
+Click [**here**](https://powerful-hollows-50123.herokuapp.com/) to check out the deployment on Heroku 
 ## License
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 is available jointly under the MIT License and the Beerware License. See
