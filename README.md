@@ -2,7 +2,9 @@
 This is the sample application for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+by [Michael Hartl](http://www.michaelhartl.com/).\
+
+**Update:** Due to recent changes to heroku, the hosted site does not work anymore 
 
 Click [**here**](https://powerful-hollows-50123.herokuapp.com/) to check out the deployment on Heroku 
 ## License
