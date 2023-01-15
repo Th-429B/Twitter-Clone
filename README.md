@@ -6,7 +6,7 @@ by [Michael Hartl](http://www.michaelhartl.com/).\
 
 **Update:** Due to recent changes to heroku, the hosted site does not work anymore 
 
-Click [**here**](https://powerful-hollows-50123.herokuapp.com/) to check out the deployment on Heroku 
+~~Click [**here**](https://powerful-hollows-50123.herokuapp.com/) to check out the deployment on Heroku~~
 ## License
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 is available jointly under the MIT License and the Beerware License. See
