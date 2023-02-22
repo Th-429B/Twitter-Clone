@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.3.0'
 gem 'rails', '5.1.6'
 gem 'bcrypt', '3.1.12'
 # did not specify version since there was a conflict and the gem file for 5th edition on github does not exist.
